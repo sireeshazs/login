@@ -7,7 +7,7 @@ pipeline{
         stage('Download Dependencies') {
             steps {
                 sh '''
-                install go
+                install golang
             '''
             }
         }
