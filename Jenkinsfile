@@ -7,7 +7,7 @@ pipeline{
         stage('Download Dependencies') {
             steps {
                 sh '''
-                export GOPATH=/go && go get
+                export GOPATH=/go && sudo go get
                 go build
             '''
             }
