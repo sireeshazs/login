@@ -3,6 +3,6 @@
 todo (
         COMPONENT             : 'login',
         PROJECT_NAME          : "TODOAPP",
-        SLAVE_LABEL           : "MASTER",
+        SLAVE_LABEL           : "agent1",
         SKIP_NEXUS_UPLOAD     : false,
         APP_TYPE              : "NGINX"
