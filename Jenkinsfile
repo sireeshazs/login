@@ -2,7 +2,8 @@
 
 todo (
         COMPONENT             : 'login',
-        PROJECT_NAME          : "TODOAPP",
-        SLAVE_LABEL           : "agent1",
+        PROJECT_NAME          : "todo",
+        SLAVE_LABEL           : "GOLANG",
         SKIP_NEXUS_UPLOAD     : false,
-        APP_TYPE              : "NGINX"
+        APP_TYPE              : "GOLANG"
+)
