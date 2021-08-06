@@ -1,6 +1,3 @@
 From      golang:1.16-alpine
-RUN       mkdir -p /gopath/src/build
-WORKDIR   /gopath
-RUN       go get -d -v ./...
-RUN       go build -d -v ./...
-CMD       ["login"]
+RUN       mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
+WORKDIR   $GOPATH
