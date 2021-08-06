@@ -1,5 +1,7 @@
 FROM      golang:1.16-alpine
-RUN       mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
+RUN       mkdir -p "/go/src" "/go/bin" && chmod -R 777 "/go"
+ENV       GOPATH="/go" \
+    PATH="/go/bin:/opt/bitnami/go/bin:$PATH"
 WORKDIR   $GOPATH
-COPY      $GOPATH /go
-
+RUN       go get ./
+RUN       go build
