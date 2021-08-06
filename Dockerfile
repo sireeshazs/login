@@ -1,0 +1,6 @@
+From      golang:1.16-alpine
+RUN       mkdir -p /gopath/src/bin
+WORKDIR   /gopath
+RUN       go get -d -v ./...
+RUN       go build -d -v ./...
+CMD       ["login"]
