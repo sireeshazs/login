@@ -3,5 +3,5 @@ RUN       mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 ENV       GOPATH=/go
 WORKDIR   ${GOPATH}}  
 ADD       . $GOPATH       
-COPY      \$GOPATH /bin 
+COPY      \$GOPATH /src/bin
 
