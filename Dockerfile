@@ -1,9 +1,9 @@
 FROM      golang:latest
 RUN       mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-ADD       . $GOPATH/src/bin
+ADD       . $GOPATH/src/in
 WORKDIR   $GOPATH/src/bin
-COPY      go.mod go.get ./
-RUN       go mod download
+RUN       go mod init
+RUN        go.get ./
 COPY      . .
 RUN       go build -o /main . 
 CMD       ["./main"]
