@@ -4,6 +4,6 @@ ADD       . $GOPATH/src/bin
 WORKDIR   $GOPATH/src/bin
 RUN       go mod init
 RUN       go get ./...
-RUN       go test -o /main . 
+RUN       go build -o /main . 
 CMD       ["./main"]
 
