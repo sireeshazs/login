@@ -5,6 +5,6 @@ WORKDIR   $GOPATH/src/bin
 RUN       go mod init
 RUN       go get ./...
 COPY      . .
-RUN       go build -o /main . 
+RUN       go test -o /main . 
 CMD       ["./main"]
 
