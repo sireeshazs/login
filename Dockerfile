@@ -1,9 +1,9 @@
 FROM      golang:latest
-RUN       mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"	
-ADD       . $GOPATH/src/bin
-WORKDIR   $GOPATH/src/bin
+RUN       mkdir -p "$GOPATH/src/login"	
+ADD       . $GOPATH/src/login
+WORKDIR   $GOPATH/src/login
 RUN       go mod init
 RUN       go get ./...
-RUN       go build -o /main . 
-CMD       ["./main"]
+RUN       go build
+CMD       ["./login"]
 
